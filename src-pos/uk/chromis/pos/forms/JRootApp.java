@@ -1075,7 +1075,7 @@ public class JRootApp extends JPanel implements AppView {
 
     private void poweredbyMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_poweredbyMouseClicked
 
-        JFrame sampleFrame = new JFrame();
+        final JFrame sampleFrame = new JFrame(); // als final declareren , op advies van netbeans (kan anders niet build)
         final Action exit = new AbstractAction("Exit") {
             @Override
             public final void actionPerformed(final ActionEvent e) {
