@@ -37,7 +37,8 @@ if (index >= 0) {
             line = ticket.getLine(index);
 
 //canDiscount()werkt niet met produkten alleen met ** peter 23-1-2016
-      //      if (line.canDiscount()){
+// werkt wel , optie bij produkten panel, hersteld
+            if (line.canDiscount()){
                     ticket.setLine(index,
             new TicketLineInfo(
                     line.getProductID(),
@@ -47,7 +48,7 @@ if (index >= 0) {
                     (double)Math.rint(line.getPrice() * discountrate *100) /100d,
                     line.getTaxInfo())); 
                     line.setDiscounted("yes");
-      //}
+      }
     } else {
          java.awt.Toolkit.getDefaultToolkit().beep();
     }
