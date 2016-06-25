@@ -34,6 +34,8 @@ import uk.chromis.pos.forms.DataLogicSales;
 import uk.chromis.pos.ticket.ProductFilterSales;
 import uk.chromis.pos.ticket.ProductInfoExt;
 import uk.chromis.pos.ticket.ProductRenderer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 
 /**
  *
@@ -309,6 +311,7 @@ public class JProductFinder extends javax.swing.JDialog {
                 jListProducts.setSelectedIndex(0);
             }
         } catch (BasicException e) {
+             Logger.getLogger(JProductFinder.class.getName()).log(Level.SEVERE, null, e );
         }
         
     }//GEN-LAST:event_jButton3ActionPerformed
